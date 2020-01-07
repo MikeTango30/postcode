@@ -1,7 +1,6 @@
 'use strict';
 
 (function () {
-
     const API_KEY = '&key=UNFYHJYNHGwWmFmG5Go1';
     const API_ADDRESS = 'https://api.postit.lt/?term=';
     const DEFAULT_ADDRESS = 'Savanorių+12,+Vilnius';
@@ -23,9 +22,7 @@
             let data = await response.json();
 
             postcodeBox.value = await data.data[0].post_code;
-
         }
-
     }
 
     const postcode = new Postcode();
@@ -38,5 +35,4 @@
             postcodeBox.value = '...'
         }
     });
-
 })();
